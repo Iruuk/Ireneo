@@ -7,13 +7,42 @@
         rel="stylesheet" 
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
         crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <meta name="keywords" content="HTML, CSS, JavaScript,">
         <meta name="author" content="Ireneus Bezruckinas-Nadtocij">
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
-        <div class="container container-fluid" id="about">
-            <div class="row">
+    <body onload="startTime()">
+        <div class="header">
+            <h2 id="title">Me Myself And I</h2>
+        </div>
+        <div class="sidenav">
+            <img src="images/picture_about.jpg" class="profile-pic">
+            <div id="txt" class="clock"></div>
+            <a>
+              <button id="dark_mode" onclick="myFunction()">
+                <svg id="dark-mode-icon" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>ic_fluent_dark_theme_24_regular</title>
+                    <desc>Created with Sketch.</desc>
+                    <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="ic_fluent_dark_theme_24_regular" fill="#212121" fill-rule="nonzero">
+                        <path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z" id="🎨-Color"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </a>
+            <a href="#home"><i class="fas fa-home"></i> Home</a>
+            <a href="#about"><i class="fas fa-user"></i> About</a>
+            <a href="#resume"><i class="fas fa-file-alt"></i> Resume</a>
+            <a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a>
+        </div>
+        <div class="main">
+            <div class="container container-fluid" id="about">
                 <h1>About</h1>
                 <hr id="margines">
                 <p>
@@ -22,55 +51,205 @@
                     Curabitur sed odio sed ligula imperdiet malesuada.
                     Pellentesque eget sodales velit. Donec sollicitudin sagittis nibh congue semper. 
                 </p>
-                <div class="col-sm-4">
-                    <img src="images/picture_about.jpg"> 
-                </div>
-                <div class="col-sm-8">
-                    <h3>Electric Power Enginer</h3>
-                    <p>
+                <div class="row align-items-center">
+                    <div class="col-sx-12 col-sm-12 col-md-4">
+                      <img src="images/picture_about.jpg" alt="About Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-sx-12 col-sm-12 col-md-8">
+                      <h3>Electric Power Engineer</h3>
+                      <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Donec turpis velit, semper sit amet egestas in, finibus a ipsum. 
                         Curabitur sed odio sed ligula imperdiet malesuada. 
                         Pellentesque eget sodales velit. Donec sollicitudin sagittis nibh congue semper. 
                         Duis iaculis justo vel suscipit pulvinar. 
                         Morbi tristique eleifend egestas.
-                    </p>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <ul>
-                                <li><b>Birthday: </b>09 July, 1999</li>
-                                <li><b>Phone: </b>+1234567890</li>
-                                <li><b>City: </b>Lithuania, Vilnius</li>
-                            </ul>
+                      </p>
+                      <div class="row">
+                        <div class="col-sm-6 col-12">
+                          <ul class="a">
+                            <li><b>Birthday: </b>09 July, 1999</li>
+                            <li><b>Phone: </b>+1234567890</li>
+                            <li><b>City: </b>Lithuania, Vilnius</li>
+                          </ul>
                         </div>
-                        <div class="col-sm-6">
-                            <ul>
-                                <li><b>Age: </b>19</li>
-                                <li><b>Degree: </b> Bachelor</li>
-                                <li><b>Email: </b>email@example.com</li>
-                                <li><b>Freelance: </b>Available</li>
-                            </ul>
+                        <div class="col-sm-6 col-12">
+                          <ul class="b">
+                            <li><b>Age: </b>19</li>
+                            <li><b>Degree: </b> Bachelor</li>
+                            <li><b>Email: </b>email@example.com</li>
+                            <li><b>Freelance: </b>Currently student</li>
+                          </ul>
                         </div>
+                      </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="resume">
-            <h1>Resume</h1>
-        </div>
-        <div id="portfolio">
-            <h1>Portfolio</h1>
-        </div>
-        <div id="service">
-            <h1>Service</h1>
-            <video width="320" height="240" controls>
-                <source src="images/video_service.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <audio controls>
-                <source src="images/audio_service.mp3" type="audio/mp3">
-            </audio>
-        </div>
+            <div class="container container-fluid" id="resume">
+                <h1>Resume</h1>
+                <hr id="margines">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Etiam commodo tristique enim vitae ornare. 
+                    Nunc viverra sit amet est vitae molestie. 
+                    Phasellus id porttitor enim, in pellentesque ipsum. 
+                    Nulla facilisi. Sed ac ipsum ligula. 
+                    Curabitur feugiat interdum felis vitae ornare.
+                </p>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <h3>Sumary</h3>
+                        <h5>Franek Bananek</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Etiam commodo tristique enim vitae ornare. 
+                            Nunc viverra sit amet est vitae molestie. 
+                            Phasellus id porttitor enim, in pellentesque ipsum. 
+                            Nulla facilisi. Sed ac ipsum ligula.
+                        </p>
+                        <ul>
+                            <li>Barkley str 123, Colorado, SD</li>
+                            <li>(123)456-7891</li>
+                            <li>email@example.com</li>
+                        </ul>
+                        <h3>Education</h3>
+                        <h5>Master Degree</h5>
+                        <b>2000-1999</b><br>
+                        <i>University, City, Country</i>
+                        <p>
+                            Pellentesque eget sodales velit. Donec sollicitudin sagittis nibh congue semper. 
+                            Duis iaculis justo vel suscipit pulvinar. 
+                            Morbi tristique eleifend egestas.
+                        </p>
+                        <h5>Bachelor Degree</h5>
+                        <b>1999-1998</b><br>
+                        <i>University, City, Country</i>
+                        <p>
+                            Pellentesque eget sodales velit. Donec sollicitudin sagittis nibh congue semper. 
+                            Duis iaculis justo vel suscipit pulvinar. 
+                            Morbi tristique eleifend egestas.
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <h3>Experience</h3>
+                        <h5>Project1</h5>
+                        <b>2000-2000</b><br>
+                        <i>Name, City, Country</i>
+                        <ul>
+                            <li>Pellentesque eget sodales velit. Donec sollicitudin sagittis nibh congue semper.</li>
+                            <li>Duis iaculis justo vel suscipit pulvinar.</li>
+                            <li>Morbi tristique eleifend egestas.</li>
+                        </ul>
+                        <h5>Project2</h5>
+                        <b>2000-2000</b><br>
+                        <i>Name, City, Country</i>
+                        <ul>
+                            <li>Pellentesque eget sodales velit. Donec sollicitudin sagittis nibh congue semper.</li>
+                            <li>Duis iaculis justo vel suscipit pulvinar.</li>
+                            <li>Morbi tristique eleifend egestas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container container-fluid" id="portfolio">
+                <h1>Portfolio</h1>
+                <hr id="margines">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Etiam commodo tristique enim vitae ornare. 
+                    Nunc viverra sit amet est vitae molestie. 
+                    Phasellus id porttitor enim, in pellentesque ipsum. 
+                    Nulla facilisi. Sed ac ipsum ligula.
+                </p>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <img src="images/portfolio_1.jpg" alt="Portfolio 1" class="img-fluid">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <img src="images/portfolio_2.jpg" alt="Portfolio 2" class="img-fluid">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4">
+                      <img src="images/portfolio_3.jpg" alt="Portfolio 3" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <img src="images/portfolio_4.jpg" alt="Portfolio 4" class="img-fluid">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <img src="images/portfolio_5.jpg" alt="Portfolio 5" class="img-fluid">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4">
+                      <img src="images/portfolio_6.jpg" alt="Portfolio 6" class="img-fluid">
+                    </div>
+                </div>
+            </div>
 
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+          <svg id="arrow" width="50px" height="50px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier"><path fill="#007bff" fill-rule="nonzero" 
+              d="M20 12l6 5.656-1.5 1.414-3.44-3.242V28h-2.12V15.828L15.5 19.07 14 17.656z"></path></g>
+          </svg>
+        </button>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/vilniustech" target="_blank" class="icon-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/vilniustech/?hl=en" target="_blank" class="icon-link"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p><strong>Contact Info:</strong></p>
+                    <p>Phone number: +1234567890</p>
+                    <p>E-mail: email@example.com</p>
+                </div>
+                <p class="creator-name">Created by: IrishCream</p>
+            </div>
+        </footer>
+
+        <script>
+            function startTime() {
+              const today = new Date();
+              let h = today.getHours();
+              let m = today.getMinutes();
+              let s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+              setTimeout(startTime, 1000);
+            }
+            
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i}; 
+              return i;
+            }
+        </script>
+        <script>
+            let mybutton = document.getElementById("myBtn");
+            
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <script>
+            function myFunction() {
+                document.body.classList.toggle("dark-mode");
+                const allSections = document.querySelectorAll(".main, .sidenav");
+                allSections.forEach(section => section.classList.toggle("dark-mode"));
+            }
+        </script>
     </body>
 </html>

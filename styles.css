@@ -1,6 +1,423 @@
+/* Global Styles */
 #margines {
-    background-color:darkred;
-    border-style: none;
-    height: 3px;
-    width: 50px;
+  background-color: darkred;
+  border-style: none;
+  height: 3px;
+  width: 50px;
+  margin: 0 0 20px 0; 
 }
+
+#title{
+  font-family: "Brush Script MT", cursive;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana", serif;
+  font-size: 17px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Georgia", serif;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.header {
+  padding: 6px;
+  text-align: right;
+  background: #4d79ff;
+  font-size: 30px;
+}
+
+/*clock*/
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px; 
+  background-color: #333; 
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-bottom: 15px; 
+}
+
+.clock {
+  font-size: 15px; 
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  margin: 20px auto; 
+  border: 2px solid #4d79ff;
+  border-radius: 8px;
+  background-color: #222; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%; 
+}
+
+/*Profile icon*/
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 9px solid #4d79ff;
+}
+/* Side Navigation */
+.sidenav {
+  width: 250px;
+  background-color: #000000;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  z-index: 1000;
+  overflow-x: hidden; 
+}
+
+.sidenav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.sidenav a i {
+  margin-right: 10px;
+  color: #4d79ff;
+  transition: color 0.3s;
+  transition: all 0.3s ease;
+}
+
+.sidenav a:hover, 
+.sidenav a:focus {
+  color: #ffffff;
+}
+
+.sidenav a:hover i,
+.sidenav a:focus i {
+  color: #3dd0fd;
+  transform: scale(1.1);
+}
+
+.main {
+  margin-left: 260px;
+  padding: 20px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* About Section */
+#about img {
+  border-radius: 8px;
+  max-height: 300px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#about .row {
+  margin-top: 20px;
+}
+
+/* Portfolio Images */
+#portfolio img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph margins*/
+p {
+  margin-bottom: 30px;
+}
+
+
+@media (max-width: 992px) {
+  .sidenav {
+    width: 200px;
+  }
+  .main {
+    margin-left: 210px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidenav {
+    width: 180px;
+  }
+  .main {
+    margin-left: 190px;
+    font-size: 16px;
+  }
+  .sidenav a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidenav {
+    width: 100px;
+    padding-top: 10px;
+  }
+  .sidenav a {
+    font-size: 14px;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+  }
+  .sidenav a i {
+    margin: 0;
+  }
+  .main {
+    margin-left: 110px;
+    font-size: 14px;
+  }
+
+  /* Stack About Section for Small Screens */
+  #about .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #about img {
+    max-height: 200px;
+  }
+
+  /* Adjust Portfolio Images */
+  #portfolio img {
+    height: auto;
+  }
+}
+
+/* Resume Section */
+#resume{
+  padding: 60px 0;
+  overflow: clip;
+}
+
+#resume .row {
+  margin-top: 20px;
+}
+
+#resume h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+#resume h5 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+#resume p, #resume ul {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+ul.a {
+  list-style-type: none; 
+  padding-left: 22px;    
+}
+
+ul.a li {
+  position: relative;
+  padding-left: 30px;   
+}
+
+ul.a li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;           
+  height: 20px;          
+  background-image: url('images/ul_img.png'); 
+  background-size: contain;
+}
+ul.b {
+  list-style-type: none; 
+  padding-left: 22px;    
+}
+
+ul.b li {
+  position: relative;
+  padding-left: 30px;    
+}
+
+ul.b li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;           
+  height: 20px;          
+  background-image: url('images/ul_img.png'); 
+  background-size: contain;  
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode .sidenav {
+  background-color: #333;
+}
+
+.dark-mode .sidenav a {
+  color: #aaa;
+}
+
+.dark-mode .sidenav a:hover,
+.dark-mode .sidenav a:focus {
+  color: #fff;
+}
+
+.dark-mode #margines {
+  background-color: white;
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode h4, 
+.dark-mode h5, 
+.dark-mode h6 {
+  color: white;
+}
+
+.dark-mode img {
+  filter: brightness(0.8); 
+}
+
+
+#dark_mode {
+  margin: 55px;
+  padding: 0; 
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%; 
+  width: 60px; 
+  height: 60px; 
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+
+#dark_mode svg {
+  width: 100%;
+  height: 100%;
+  transition: fill 0.3s ease; 
+}
+
+
+#dark_mode:hover {
+  background-color: #0056b3;
+}
+
+#dark_mode:hover svg {
+  fill: #3dd0fd; 
+}
+
+
+/*Footer*/
+.footer {
+  background-color: #007bff; 
+  color: white; 
+  padding: 20px; 
+  text-align: center; 
+  font-size: 14px; 
+}
+
+
+.social-icons {
+  margin-bottom: 15px;
+}
+
+
+.icon-link {
+  color: white; 
+  font-size: 30px; 
+  margin: 0 10px; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
+}
+
+
+.icon-link:hover {
+  color: #3dd0fd; 
+}
+
+
+.contact-info {
+  margin-bottom: 15px;
+}
+
+
+.creator-name {
+  font-size: 12px; 
+  color: #ccc; 
+}
+
+/*Scroll to top*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgb(65, 64, 64);
+  cursor: pointer;
+  padding: 0; 
+  border-radius: 50%; 
+  font-size: 18px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+#myBtn svg {
+  width: 100%;
+  height: 100%;
+  transition: fill 0.3s ease; 
+}
+
+
+#myBtn:hover {
+  background-color: #302f2f;
+}
+
+
+#myBtn:hover svg {
+  fill: #3dd0fd; 
+}
+
+
